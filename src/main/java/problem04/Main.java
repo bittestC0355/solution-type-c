@@ -44,6 +44,7 @@ public class Main {
 			}
 			System.out.println(sb.toString());
 		}
+		//fsf
 		int prevNum = 0;
 		int number = 1;
 		boolean[] select = new boolean[totalCount];
