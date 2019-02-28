@@ -16,10 +16,10 @@ public class Main {
 		
 		// 키보드 입력을 받기 위해 Scanner 생성
 		Scanner scanner = new Scanner(System.in);
+		System.out.println(randomNumber);
 		
 		// 게임 시작
 		while( true ) {
-	
 			System.out.print( "[" + min + "-" + max + "] 사이의 값 입력:" );
 			int answer = scanner.nextInt();
 			
@@ -39,6 +39,19 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+		if(answer < min || answer > max) {
+			return false;
+		}
+		if(answer == randomNumber) {
+			count++;
+			return true;
+		}
+		if(answer > randomNumber) {
+			max = answer;
+		}else {
+			min = answer;
+		}
+		count++;
+		return false;
 	}
 }

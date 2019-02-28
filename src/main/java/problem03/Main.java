@@ -14,7 +14,6 @@ public class Main {
 			String s = stack.pop();
 			System.out.println(s);
 		}
-
 		System.out.println("======================================");
 
 		stack = new MyStack(3);
